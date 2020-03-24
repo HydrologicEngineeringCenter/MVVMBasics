@@ -13,5 +13,11 @@ namespace MVVMBasics
 	/// </summary>
 	public partial class App : Application
 	{
+		private void Application_Startup(object sender, StartupEventArgs e)
+		{
+			View.Windows.BasicWindow window = new View.Windows.BasicWindow(new ViewModelExample.ExampleViewModel());
+			window.Show();
+		}
 	}
+
 }
