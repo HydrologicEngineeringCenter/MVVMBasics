@@ -58,6 +58,7 @@ namespace ViewModelExample
 				Action = (object sender, EventArgs e) => {
 					_exampleModel.Update(Increment*Multiplier);
 					NotifyPropertyChanged(nameof(CounterValue));
+					Update();
 				}
 			};
 		}

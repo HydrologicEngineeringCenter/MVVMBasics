@@ -24,6 +24,6 @@
 		<v:NamedActionButton Grid.Row="3" Grid.Column="1" NamedAction="{Binding Command}"/>
 		<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Increment}"/>
 		<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Multiplier}"/>
-		<TextBox Grid.Row="2" Grid.Column="1" Text="{Binding CounterValue, Mode=OneWay}"/>
+		<TextBox Grid.Row="2" Grid.Column="1" Text="{Binding CounterValue, Mode=OneWay}" IsReadOnly="True"/>
 	</Grid>
 </UserControl>
