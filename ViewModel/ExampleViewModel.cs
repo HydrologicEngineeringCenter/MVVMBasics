@@ -18,7 +18,7 @@ namespace ViewModelExample
 			set
 			{
 				_increment = value;
-				Update();
+				NotifyPropertyChanged(ActionName);
 			}
 		}
 		public int CounterValue
@@ -41,24 +41,22 @@ namespace ViewModelExample
 			set
 			{
 				_multiplier = value;
-				Update();
+				NotifyPropertyChanged(ActionName);
 			}
 		}
 
-		private void Update()
-		{
-			_cmd.Name = "Advance to " + (_exampleModel.Counter + _multiplier * _increment);
-			NotifyPropertyChanged();
-		}
 
+		public string ActionName
+		{
+			get { return "Advance to " + (_exampleModel.Counter + _multiplier * _increment); }
+		}
 		public ExampleViewModel()
 		{
 			_cmd = new ViewModel.Implementations.NamedAction() {
-				Name = "Advance By Increment",
+				Name = ActionName,
 				Action = (object sender, EventArgs e) => {
 					_exampleModel.Update(Increment*Multiplier);
 					NotifyPropertyChanged(nameof(CounterValue));
-					Update();
 				}
 			};
 		}
