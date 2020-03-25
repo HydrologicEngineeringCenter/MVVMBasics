@@ -10,10 +10,10 @@
 
   <ItemGroup>
     <Reference Include="Base">
-      <HintPath>..\..\..\Users\Q0HECWPL\Documents\Visual Studio 2015\Projects\Framework_Tester\Framework_ViewModel\bin\Debug\Base.dll</HintPath>
+      <HintPath>..\..\Framework\Base.dll</HintPath>
     </Reference>
     <Reference Include="ViewModel">
-      <HintPath>..\..\..\Users\Q0HECWPL\Documents\Visual Studio 2015\Projects\Framework_Tester\Framework_Tester\bin\Debug\ViewModel.dll</HintPath>
+      <HintPath>..\..\Framework\ViewModel.dll</HintPath>
     </Reference>
   </ItemGroup>
 

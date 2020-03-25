@@ -7,6 +7,7 @@ namespace ViewModelExample
 	{
 		private Model.ExampleModel _exampleModel = new Model.ExampleModel();
 		private int _increment = 2;
+		private int _multiplier = 1;
 		private ViewModel.Implementations.NamedAction _cmd;
 		public int Increment
 		{
@@ -33,6 +34,16 @@ namespace ViewModelExample
 				return _cmd;
 			}
 		}
+
+		public int Multiplier { 
+			get => _multiplier;
+			set {
+				_multiplier = value;
+				_cmd.Name = "Advance to " + _exampleModel.Counter + _multiplier * _increment;
+				NotifyPropertyChanged();
+			}
+		}
+
 		public ExampleViewModel()
 		{
 			_cmd = new ViewModel.Implementations.NamedAction() {

@@ -36,7 +36,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Base">
-      <HintPath>..\..\..\Users\Q0HECWPL\Documents\Visual Studio 2015\Projects\Framework_Tester\Framework_ViewModel\bin\Debug\Base.dll</HintPath>
+      <HintPath>..\..\Framework\Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Model">
+      <HintPath>..\..\Framework\Model.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -50,10 +53,10 @@
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="View">
-      <HintPath>..\..\..\Users\Q0HECWPL\Documents\Visual Studio 2015\Projects\Framework_Tester\Framework_Tester\bin\Debug\View.dll</HintPath>
+      <HintPath>..\..\Framework\View.dll</HintPath>
     </Reference>
     <Reference Include="ViewModel">
-      <HintPath>..\..\..\Users\Q0HECWPL\Documents\Visual Studio 2015\Projects\Framework_Tester\Framework_Tester\bin\Debug\ViewModel.dll</HintPath>
+      <HintPath>..\..\Framework\ViewModel.dll</HintPath>
     </Reference>
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
