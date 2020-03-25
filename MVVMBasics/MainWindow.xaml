@@ -13,6 +13,7 @@
 			<RowDefinition Height="32"/>
 			<RowDefinition Height="32"/>
 			<RowDefinition Height="32"/>
+			<RowDefinition Height="32"/>
 		</Grid.RowDefinitions>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="*"/>
@@ -24,8 +25,10 @@
 		<Label Grid.Row="3" Grid.Column="0" Content="{Binding ActionName}"/>
         
         <v:NamedActionButton Grid.Row="4" Grid.Column="1" NamedAction="{Binding Command}" />
+        
 		<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Increment}"/>
 		<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding Multiplier}"/>
-		<TextBox Grid.Row="2" Grid.Column="1" Text="{Binding CounterValue, Mode=OneWay}" IsReadOnly="True"/>
+		<TextBox Grid.Row="2" Grid.Column="1" Text="{Binding CounterValue, Mode=OneWay}" IsReadOnly="{Binding IsReadOnly}"/>
+        <CheckBox Grid.Row="3" Grid.Column="1" IsChecked="{Binding IsReadOnly}"  ></CheckBox>
 	</Grid>
 </UserControl>

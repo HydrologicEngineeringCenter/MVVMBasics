@@ -9,7 +9,18 @@ namespace ViewModelExample
 		private int _increment = 2;
 		private int _multiplier = 1;
 		private string _actionName = "";
+		private bool _isReadOnly = false;
 		private ViewModel.Implementations.NamedAction _cmd = new ViewModel.Implementations.NamedAction();
+
+		public bool IsReadOnly {
+
+			get { return _isReadOnly; }
+			set { 
+				_isReadOnly = value;
+				NotifyPropertyChanged();
+			}
+		}
+
 		public int Increment
 		{
 			get
