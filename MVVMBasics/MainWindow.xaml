@@ -20,8 +20,8 @@
 		</Grid.ColumnDefinitions>
 		<Label Grid.Row="0" Grid.Column="0" Content="Increment By:"/>
 		<Label Grid.Row="1" Grid.Column="0" Content="Current Value:"/>
-		<v:NamedActionButton Grid.Row="2" Grid.Column="1" NamedAction="{Binding Command}"/>
-		<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Increment}"/>
+		<TextBox Grid.Row="0" Grid.Column="1" Text="{Binding Increments}"/>
 		<TextBox Grid.Row="1" Grid.Column="1" Text="{Binding CounterValue, Mode=OneWay}"/>
+		<v:NamedActionButton Grid.Row="2" Grid.Column="1" NamedAction="{Binding Command}"/>
 	</Grid>
 </UserControl>

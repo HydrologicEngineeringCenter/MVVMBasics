@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace ViewModelExample
 {
-	public class ExampleViewModel : ViewModel.Implementations.BaseViewModel
+	public class ExampleViewModel : ViewModel.Implementations.BaseViewModel // System.ComponentModel.NotifyPropertyChanged
 	{
 		private Model.ExampleModel _exampleModel = new Model.ExampleModel();
 		private int _increment = 2;
@@ -16,7 +16,8 @@ namespace ViewModelExample
 			}
 			set
 			{
-				_increment = value; NotifyPropertyChanged();
+				_increment = value;
+				NotifyPropertyChanged();
 			}
 		}
 		public int CounterValue
